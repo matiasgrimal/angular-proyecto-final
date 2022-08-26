@@ -1,0 +1,50 @@
+
+<body>
+
+
+    <br><br>
+
+    <h1 class="text-center animate__animated animate__bounce display-1 text-bg-secondary p-3">Cursos</h1>
+
+    <br>
+
+    <!---- Card --->
+    <div class="d-flex justify-content-around">
+    <div class="card" style="width: 24rem;">
+      <img src="../../../assets/images/pyton.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text text-center">Curso introduccion a Python</p>
+      </div>
+    </div>
+    <div class="card" style="width: 24rem;">
+      <img src="../../../assets/images/maxresdefault.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text text-center">Curso Programacion Javascript</p>
+      </div>
+    </div>
+    <div class="card" style="width: 24rem;">
+      <img src="../../../assets/images/Caratula-Angular.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text text-center">Curso general Angular 100% Remoto</p>
+      </div>
+    </div>
+  </div>
+
+  <br><br>
+
+  <div class="text-center">
+  <button type="button" class="btn btn-outline-success" routerLink="precio">PRECIO CURSOS</button>
+</div>
+
+  <router-outlet></router-outlet>
+    <br>
+
+    <h2 class="text-center animate__animated animate__bounce display-1 text-bg-secondary p-3">Alumnos</h2>
+    <br>
+
+    <app-tabla-alumnos></app-tabla-alumnos>
+
+</body>
+
+
+
