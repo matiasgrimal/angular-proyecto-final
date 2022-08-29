@@ -4,6 +4,7 @@ import { PublicComponent } from './components/public/public.component';
 import { PreciocursosComponent } from './components/public/preciocursos/preciocursos.component';
 import { PrivateComponent } from './components/private/private.component';
 import { AuthGuard } from './guards/auth.guard';
+import { CommonModule } from '@angular/common';
 
 
 // import { AuthGuard } from '@auth0/auth0-angular';
@@ -11,7 +12,11 @@ import { AuthGuard } from './guards/auth.guard';
 
 const rutas: Routes = [
   { path: 'public', component: PublicComponent },
-  { path: 'private', component: PrivateComponent, canActivate: [AuthGuard] },
+  {
+    path: 'private',
+    loadChildren: () => import('./components/public/contact-reactive/contact-reactive.module').then(m => m.ContactReactiveModule),
+    canActivate: [AuthGuard]
+  },
   {
     path: 'public',
     component: PublicComponent,
@@ -23,7 +28,9 @@ const rutas: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(rutas)],
+  declarations: [],
+  imports: [CommonModule,
+    RouterModule.forRoot(rutas)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

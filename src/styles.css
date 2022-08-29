@@ -3,3 +3,34 @@
 body {
     background-color: black;
 }
+
+.botoninstagram {
+    color: #ff009d;
+}
+
+.botonfacebook {
+    color: #0e246d;
+}
+
+.botontwitter {
+    color: #186ca3;
+}
+
+.footerpie {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    font-family: sans-serif;
+    color: whitesmoke;
+    width: 100%;
+    bottom: 0;
+}
+
+.card {
+    background-color: black
+}
+
+.titulo {
+    color: white;
+}

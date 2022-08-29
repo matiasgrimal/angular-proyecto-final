@@ -10,6 +10,9 @@ import { PublicComponent } from './components/public/public.component';
 import { PrivateComponent } from './components/private/private.component';
 import { TablaAlumnosComponent } from './components/public/tabla-alumnos/tabla-alumnos.component';
 import { PreciocursosComponent } from './components/public/preciocursos/preciocursos.component';
+import { TablacursosComponent } from './components/private/tablacursos/tablacursos.component';
+import { MiDirectivaDirective } from './components/private/directiva/mi-directiva.directive';
+
 
 
 @NgModule({
@@ -19,6 +22,8 @@ import { PreciocursosComponent } from './components/public/preciocursos/preciocu
     PrivateComponent,
     TablaAlumnosComponent,
     PreciocursosComponent,
+    TablacursosComponent,
+    MiDirectivaDirective,
 
   ],
   imports: [

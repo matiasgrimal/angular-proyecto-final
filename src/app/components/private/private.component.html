@@ -1,1 +1,21 @@
-<h1>Profesores</h1>
+
+<br><br>
+<h1 class="text-center text-white">Seccion Profesores</h1>
+
+<br><br>
+<h2 appMiDirectiva>Cursos y Horarios</h2>
+
+<br>
+
+<app-tablacursos></app-tablacursos>
+
+<h3 appMiDirectiva>Listado De Profesores</h3>
+
+<ul class="listaprofesores p-3 h3">
+    <li *ngFor="let profesor of profesores">
+        {{profesor}}
+    </li>
+
+</ul>
+
+<p>Cierre de inscripciones {{'8/30/22, 23:59' | date:'full'}}</p>

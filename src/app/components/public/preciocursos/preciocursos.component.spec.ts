@@ -8,9 +8,9 @@ describe('PreciocursosComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PreciocursosComponent ]
+      declarations: [PreciocursosComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +19,7 @@ describe('PreciocursosComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Funcionando', () => {
     expect(component).toBeTruthy();
   });
 });

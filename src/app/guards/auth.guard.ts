@@ -12,34 +12,34 @@ export class AuthGuard implements CanActivate {
     private auth: AuthService,
     private router: Router) { }
 
-    loggedin:boolean;
+  loggedin: boolean;
 
   canActivate(
     next: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot):Observable<boolean> | Promise<boolean | UrlTree> | boolean {
-      //  console.log('xd');
-      //  if(!this.auth.isAuthenticated$){
-      //    console.log('No autenticado');
-      //    this.router.navigate(['public']);
-      //  }else{
-      //    return true;
-      //  }
+    state: RouterStateSnapshot): Observable<boolean> | Promise<boolean | UrlTree> | boolean {
+    //  console.log('xd');
+    //  if(!this.auth.isAuthenticated$){
+    //    console.log('No autenticado');
+    //    this.router.navigate(['public']);
+    //  }else{
+    //    return true;
+    //  }
 
 
-      // return this.auth.isAuthenticated$;
-      let response:boolean = false;
+    // return this.auth.isAuthenticated$;
+    let response: boolean = false;
 
-      return this.auth.isAuthenticated$.pipe(
+    return this.auth.isAuthenticated$.pipe(
       tap(loggedIn => {
-        console.log(loggedIn);
-        if(loggedIn){
-          console.log("Puede pasar");
-        }else{
-          console.log('No autorizado');
+
+        if (loggedIn) {
+
+        } else {
+
           this.router.navigate(['public']);
         }
       }),
-      );
+    );
   }
-  
+
 }
