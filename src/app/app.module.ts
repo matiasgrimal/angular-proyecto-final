@@ -12,6 +12,8 @@ import { TablaAlumnosComponent } from './components/public/tabla-alumnos/tabla-a
 import { PreciocursosComponent } from './components/public/preciocursos/preciocursos.component';
 import { TablacursosComponent } from './components/private/tablacursos/tablacursos.component';
 import { MiDirectivaDirective } from './components/private/directiva/mi-directiva.directive';
+import { AlumnosdestacadosComponent } from './components/public/alumnosdestacados/alumnosdestacados.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -24,10 +26,13 @@ import { MiDirectivaDirective } from './components/private/directiva/mi-directiv
     PreciocursosComponent,
     TablacursosComponent,
     MiDirectivaDirective,
+    AlumnosdestacadosComponent,
+    AlumnosdestacadosComponent
 
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     // Auth0
     AuthModule.forRoot({
