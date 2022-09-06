@@ -14,6 +14,7 @@ import { TablacursosComponent } from './components/private/tablacursos/tablacurs
 import { MiDirectivaDirective } from './components/private/directiva/mi-directiva.directive';
 import { AlumnosdestacadosComponent } from './components/public/alumnosdestacados/alumnosdestacados.component';
 import { HttpClientModule } from '@angular/common/http';
+import { StoreModule } from '@ngrx/store';
 
 
 
@@ -42,7 +43,8 @@ import { HttpClientModule } from '@angular/common/http';
       cacheLocation: 'localstorage',
       useRefreshTokens: true,
       PreciocursosComponent,
-    })
+    }),
+    StoreModule.forRoot({}, {})
   ],
   providers: [],
   bootstrap: [AppComponent]
