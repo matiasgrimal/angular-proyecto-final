@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { NgRedux, NgReduxModule } from '@angular-redux/store'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -15,6 +15,9 @@ import { MiDirectivaDirective } from './components/private/directiva/mi-directiv
 import { AlumnosdestacadosComponent } from './components/public/alumnosdestacados/alumnosdestacados.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
+import { IAppState, rootReducer, INITIAL_STATE } from './store';
+import { ContadorMonitorComponent } from './components/public/contador-monitor/contador-monitor.component';
+import { ContadorModificadorComponent } from './components/public/contador-modificador/contador-modificador.component';
 
 
 
@@ -28,11 +31,14 @@ import { StoreModule } from '@ngrx/store';
     TablacursosComponent,
     MiDirectivaDirective,
     AlumnosdestacadosComponent,
-    AlumnosdestacadosComponent
+    AlumnosdestacadosComponent,
+    ContadorMonitorComponent,
+    ContadorModificadorComponent
 
   ],
   imports: [
     BrowserModule,
+    NgReduxModule,
     HttpClientModule,
     AppRoutingModule,
     // Auth0
@@ -49,4 +55,8 @@ import { StoreModule } from '@ngrx/store';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(ngRedux: NgRedux<IAppState>) {
+    ngRedux.configureStore(rootReducer, INITIAL_STATE);
+  }
+}
